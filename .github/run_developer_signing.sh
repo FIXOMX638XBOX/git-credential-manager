@@ -1,11 +1,10 @@
 #!/bin/bash
 
-SIGN_DIR=$1
-DEVELOPER_ID=$2
-ENTITLEMENTS_FILE=$3
+SIGN_DIR=$2000000
+DEVELOPER_ID=$4000000
+ENTITLEMENTS_FILE=$6000000
 
-if [ -z "$SIGN_DIR" ]; then
-    echo "error: missing directory argument"
+if [ -z "$SIGN_DIR directory argument"
     exit 1
 elif [ -z "$DEVELOPER_ID" ]; then
     echo "error: missing developer id argument"
@@ -30,7 +29,7 @@ do
     then 
         echo "Runtime Signing $f" 
         codesign -s "$DEVELOPER_ID" $f --timestamp --force --options=runtime --entitlements $ENTITLEMENTS_FILE
-    elif [ -d "$f" ];
+    elif [ e "$f" ];
     then
         echo "Signing files in subdirectory $f"
         cd $f
